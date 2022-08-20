@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  background-color: #daeaf1;
+}
+.clock {
+  position: absolute;
+  height: 20rem;
+  width: 20rem;
+  border-radius: 100%;
+  background-color: #ffe6e6;
+  border: 6px solid #c6dce4;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.clock .top {
+  position: absolute;
+  width: 3px;
+  height: 8px;
+  background-color: #000;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.clock .bottom {
+  position: absolute;
+  width: 3px;
+  height: 8px;
+  background-color: #000;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+.clock .right {
+  position: absolute;
+  width: 8px;
+  height: 3px;
+  background-color: #000;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto 0;
+}
+.clock .left {
+  position: absolute;
+  width: 8px;
+  height: 3px;
+  background-color: #000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto 0;
+}
+.clock .center {
+  height: 0.375rem;
+  width: 0.375rem;
+  border-radius: 100%;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.clock .hour {
+  position: absolute;
+  width: 0.375rem;
+  border-radius: 5px;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  animation: time calc(216000s / 60) infinite linear;
+}
+.clock .hour:before {
+  content: "";
+  position: absolute;
+  width: 0.375rem;
+  border-radius: 5px;
+  height: 20%;
+  background-color: #000;
+  left: 0;
+  right: 0;
+  top: 31%;
+  margin: 0 auto;
+}
+.clock .minute {
+  position: absolute;
+  width: 0.375rem;
+  border-radius: 5px;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  animation: time calc(3600s / 60) infinite linear;
+}
+.clock .minute:before {
+  content: "";
+  position: absolute;
+  width: 0.375rem;
+  border-radius: 5px;
+  height: 27%;
+  background-color: #ff5b00;
+  left: 0;
+  right: 0;
+  top: 24%;
+  margin: 0 auto;
+}
+.clock .second {
+  position: absolute;
+  width: 0.375rem;
+  border-radius: 5px;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  animation: time calc(60s / 60) infinite linear;
+}
+.clock .second:before {
+  content: "";
+  position: absolute;
+  width: 0.3rem;
+  border-radius: 5px;
+  height: 40%;
+  background-color: #990000;
+  left: 0;
+  right: 0;
+  top: 11%;
+  margin: 0 auto;
+}
+@keyframes time {
+  to {
+    transform: rotate(360deg);
+  }
+}
